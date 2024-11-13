@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Personal Website</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>Hi, I'm Dheer Gupta</h1>
+        <p>A passionate developer and creative problem-solver.</p>
+    </section>
+
+    <section id="about-summary">
+        <img src="Images/me.jpg" alt="Dheer Gupta" class="profile-photo">
+        <p>I am a software developer specializing in Web penetration testing.</p>
+    </section>
+
+    <section id="cta">
+        <a href="#projects" class="btn">Explore My Projects</a>
+        <a href="#contact" class="btn">Contact Me</a>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            Detail-oriented team player with experience in data analysis and design. I have a background in computer science and data science, and I am pursuing a future in cyber security with a strong interest in website penetration testing and network security.
+        </p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul class="skills-list">
+            <li>Python</li>
+            <li>R</li>
+            <li>Java</li>
+            <li>C#</li>
+            <li>Ruby</li>
+            <li>C</li>
+            <li>Assembly</li>
+            <li>Bash</li>
+            <li>JavaScript</li>
+            <li>HTML/CSS</li>
+            <li>Haskell</li>
+        </ul>
+        <h2>Software Proficiency</h2>
+        <ul class="skills-list">
+            <li>Microsoft Office Suite</li>
+            <li>Google Suite</li>
+            <li>Lightroom</li>
+        </ul>
+    </section>
+
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <ul>
+            <li>Certified Ethical Hacker</li>
+            <li>Social Engineering Certificate</li>
+            <li>Hacking with Metasploit Certificate (Udemy)</li>
+            <li>Cyber Security Professional (Google)</li>
+        </ul>
+    </section>
+
+    <section id="languages">
+        <h2>Spoken Languages</h2>
+        <ul>
+            <li>English (Fluent)</li>
+            <li>Hindi (Native)</li>
+        </ul>
+    </section>
+
+    <section id="interests">
+        <h2>Interests</h2>
+        <p>When I'm not coding, I enjoy listening to music. My genre is House Music.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="project">
+            <h3>Tic-Tac-Toe Game</h3>
+            <p>A functional programming project implemented in Haskell.</p>
+            <a href="https://github.com/yourusername/tictactoe" class="btn">View on GitHub</a>
+        </div>
+
+        <div class="project">
+            <h3>Simple Server in C#</h3>
+            <p>A basic web server designed to handle specific request endpoints, showcasing C# skills.</p>
+            <a href="https://github.com/yourusername/simple-server" class="btn">View on GitHub</a>
+        </div>
+
+        <div class="project">
+            <h3>Parallel File Processing</h3>
+            <p>
+                Implemented file compression and text analysis in parallel using OpenMP and Pthreads. Features include:
+                <ul>
+                    <li>File compression</li>
+                    <li>Word count, including duplicate words</li>
+                    <li>Line count for large text files</li>
+                </ul>
+            </p>
+            <a href="https://github.com/yourusername/parallel-file-processing" class="btn">View on GitHub</a>
+        </div>
+
+        <div class="project">
+            <h3>Word Count Tool</h3>
+            <p>A tool to count words in large files, implemented using both sequential and parallel processing approaches.</p>
+            <a href="https://github.com/yourusername/wordcount" class="btn">View on GitHub</a>
+        </div>
+
+        <div class="project">
+            <h3>Predictive Analysis for Student Success</h3>
+            <p>Developed a predictive model using Python and SVM to forecast students' success in a statistics course.</p>
+        </div>
+
+        <div class="project">
+            <h3>Data Breach Severity Prediction</h3>
+            <p>
+                Investigated factors affecting data breach severity and size using R. Techniques include:
+                <ul>
+                    <li>Linear regression</li>
+                    <li>Generalized linear models (GLM)</li>
+                    <li>Negative binomial regression</li>
+                </ul>
+            </p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Connect with me on:</p>
+        <ul class="social-links">
+            <li><a href="https://linkedin.com/in/yourprofile">LinkedIn</a></li>
+            <li><a href="https://github.com/yourusername">GitHub</a></li>
+            <li><a href="https://instagram.com/yourhandle">Instagram</a></li>
+        </ul>
+    </section>
+
+    <form id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit" class="btn">Send Message</button>
+    </form>
+
+    <footer>
+        <p>Visitors: <span id="visitor-count"></span></p>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" class="btn">Scroll to Top</button>
+
+    <script>
+        // Visitor Counter Logic
+        if (localStorage.getItem('visitCount')) {
+            localStorage.setItem('visitCount', Number(localStorage.getItem('visitCount')) + 1);
+        } else {
+            localStorage.setItem('visitCount', 1);
+        }
+        document.getElementById('visitor-count').textContent = localStorage.getItem('visitCount');
+    </script>
+</body>
+</html>
