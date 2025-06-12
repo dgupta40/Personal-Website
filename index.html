@@ -4,64 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" href="favicon.ico">
     <script src="script.js" defer></script>
-    <title>Personal Website</title>
+    <title>Dheer Gupta | Personal Website</title>
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="navbar sticky">
+            <div class="logo"><i class="fas fa-user-shield"></i> Dheer Gupta</div>
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#about-summary">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="home">
-        <h1>Hi, I'm Dheer Gupta</h1>
-        <p>A passionate developer and creative problem-solver.</p>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm <span class="highlight">Dheer Gupta</span></h1>
+            <p class="subtitle">Web Penetration Tester & Software Developer</p>
+            <div class="hero-btns">
+                <a href="#projects" class="btn">Explore My Projects</a>
+                <a href="#contact" class="btn btn-outline">Contact Me</a>
+            </div>
+        </div>
     </section>
 
-    <section id="about-summary">
+    <section id="about-summary" class="about-card">
         <img src="me.jpg" alt="Dheer Gupta" class="profile-photo">
-        <p>I am a software developer specializing in Web penetration testing.</p>
-    </section>
-
-    <section id="cta">
-        <a href="#projects" class="btn">Explore My Projects</a>
-        <a href="#contact" class="btn">Contact Me</a>
-    </section>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            Detail-oriented team player with experience in data analysis and design. I have a background in computer science and data science, and I am pursuing a future in cyber security with a strong interest in website penetration testing and network security.
-        </p>
+        <div>
+            <h2>About Me</h2>
+            <p>
+                I am a software developer specializing in web penetration testing. Detail-oriented team player with experience in data analysis and design. I have a background in computer science and data science, and I am pursuing a future in cyber security with a strong interest in website penetration testing and network security.
+            </p>
+        </div>
     </section>
 
     <section id="skills">
         <h2>Skills</h2>
-        <ul class="skills-list">
-            <li>Python</li>
-            <li>R</li>
-            <li>Java</li>
-            <li>C#</li>
-            <li>Ruby</li>
-            <li>C</li>
-            <li>Assembly</li>
-            <li>Bash</li>
-            <li>JavaScript</li>
-            <li>HTML/CSS</li>
-            <li>Haskell</li>
-        </ul>
-        <h2>Software Proficiency</h2>
-        <ul class="skills-list">
-            <li>Microsoft Office Suite</li>
-            <li>Google Suite</li>
-            <li>Lightroom</li>
-        </ul>
+        <div class="skills-flex">
+            <div>
+                <h3>Programming Languages</h3>
+                <ul class="skills-list">
+                    <li><i class="fab fa-python"></i> Python</li>
+                    <li><i class="fas fa-code"></i> R</li>
+                    <li><i class="fab fa-java"></i> Java</li>
+                    <li><i class="fab fa-microsoft"></i> C#</li>
+                    <li><i class="fas fa-gem"></i> Ruby</li>
+                    <li><i class="fas fa-c"></i> C</li>
+                    <li><i class="fas fa-microchip"></i> Assembly</li>
+                    <li><i class="fas fa-terminal"></i> Bash</li>
+                    <li><i class="fab fa-js"></i> JavaScript</li>
+                    <li><i class="fab fa-html5"></i> HTML/CSS</li>
+                    <li><i class="fas fa-brain"></i> Haskell</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Software Proficiency</h3>
+                <ul class="skills-list">
+                    <li><i class="fas fa-file-word"></i> Microsoft Office Suite</li>
+                    <li><i class="fab fa-google"></i> Google Suite</li>
+                    <li><i class="fas fa-camera-retro"></i> Lightroom</li>
+                </ul>
+            </div>
+        </div>
     </section>
 
     <section id="certifications">
@@ -84,58 +96,54 @@
 
     <section id="interests">
         <h2>Interests</h2>
-        <p>When I'm not coding, I enjoy listening to music. My genre is House Music.</p>
+        <p>When I'm not coding, I enjoy listening to House Music.</p>
     </section>
 
     <section id="projects">
         <h2>Projects</h2>
-
-        <div class="project">
-            <h3>Tic-Tac-Toe Game</h3>
-            <p>A functional programming project implemented in Haskell.</p>
-            <a href="https://github.com/yourusername/tictactoe" class="btn">View on GitHub</a>
-        </div>
-
-        <div class="project">
-            <h3>Simple Server in C#</h3>
-            <p>A basic web server designed to handle specific request endpoints, showcasing C# skills.</p>
-            <a href="https://github.com/yourusername/simple-server" class="btn">View on GitHub</a>
-        </div>
-
-        <div class="project">
-            <h3>Parallel File Processing</h3>
-            <p>
-                Implemented file compression and text analysis in parallel using OpenMP and Pthreads. Features include:
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Tic-Tac-Toe Game</h3>
+                <p>A functional programming project implemented in Haskell.</p>
+                <a href="https://github.com/yourusername/tictactoe" class="btn btn-sm" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
+            </div>
+            <div class="project-card">
+                <h3>Simple Server in C#</h3>
+                <p>A basic web server designed to handle specific request endpoints, showcasing C# skills.</p>
+                <a href="https://github.com/yourusername/simple-server" class="btn btn-sm" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
+            </div>
+            <div class="project-card">
+                <h3>Parallel File Processing</h3>
+                <p>
+                    Implemented file compression and text analysis in parallel using OpenMP and Pthreads.
+                </p>
                 <ul>
                     <li>File compression</li>
                     <li>Word count, including duplicate words</li>
                     <li>Line count for large text files</li>
                 </ul>
-            </p>
-            <a href="https://github.com/yourusername/parallel-file-processing" class="btn">View on GitHub</a>
-        </div>
-
-        <div class="project">
-            <h3>Word Count Tool</h3>
-            <p>A tool to count words in large files, implemented using both sequential and parallel processing approaches.</p>
-            <a href="https://github.com/yourusername/wordcount" class="btn">View on GitHub</a>
-        </div>
-
-        <div class="project">
-            <h3>Predictive Analysis for Student Success</h3>
-            <p>Developed a predictive model using Python and SVM to forecast students' success in a statistics course.</p>
-        </div>
-
-        <div class="project">
-            <h3>Data Breach Severity Prediction</h3>
-            <p>
-                Investigated factors affecting data breach severity and size using R. Techniques include:
+                <a href="https://github.com/yourusername/parallel-file-processing" class="btn btn-sm" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
+            </div>
+            <div class="project-card">
+                <h3>Word Count Tool</h3>
+                <p>A tool to count words in large files, implemented using both sequential and parallel processing approaches.</p>
+                <a href="https://github.com/yourusername/wordcount" class="btn btn-sm" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
+            </div>
+            <div class="project-card">
+                <h3>Predictive Analysis for Student Success</h3>
+                <p>Developed a predictive model using Python and SVM to forecast students' success in a statistics course.</p>
+            </div>
+            <div class="project-card">
+                <h3>Data Breach Severity Prediction</h3>
+                <p>
+                    Investigated factors affecting data breach severity and size using R.
+                </p>
                 <ul>
                     <li>Linear regression</li>
                     <li>Generalized linear models (GLM)</li>
                     <li>Negative binomial regression</li>
                 </ul>
-            </p>
+            </div>
         </div>
     </section>
 
@@ -143,31 +151,28 @@
         <h2>Contact Me</h2>
         <p>Connect with me on:</p>
         <ul class="social-links">
-            <li><a href="https://linkedin.com/in/yourprofile">LinkedIn</a></li>
-            <li><a href="https://github.com/yourusername">GitHub</a></li>
-            <li><a href="https://instagram.com/yourhandle">Instagram</a></li>
+            <li><a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://instagram.com/yourhandle" target="_blank"><i class="fab fa-instagram"></i></a></li>
         </ul>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
     </section>
-
-    <form id="contact-form">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" required></textarea>
-
-        <button type="submit" class="btn">Send Message</button>
-    </form>
 
     <footer>
         <p>Visitors: <span id="visitor-count"></span></p>
+        <p>&copy; 2025 Dheer Gupta. All rights reserved.</p>
     </footer>
 
     <!-- Scroll to Top Button -->
-    <button id="scrollToTopBtn" class="btn">Scroll to Top</button>
+    <button id="scrollToTopBtn" class="btn btn-sm" title="Back to top"><i class="fas fa-arrow-up"></i></button>
 
     <script>
         // Visitor Counter Logic
