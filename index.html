@@ -3,306 +3,984 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dheer Gupta | Data Science Researcher & Backend Developer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Dheer Gupta | Data Science & AI Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
+    <!-- Animated Background -->
+    <div class="bg-gradient"></div>
+    <div class="bg-grid"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">Dheer Gupta</div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <a href="#" class="nav-logo">
+                <span class="logo-text">DG</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
-    <section class="hero">
-        <div class="container">
-            <h1>Hi, I'm <span class="name">Dheer Gupta</span></h1>
-            <p>Data Science Researcher | Backend Developer | Cybersecurity Enthusiast</p>
-            <div class="cta-buttons">
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-badge animate-fade-in">
+                <span class="badge-dot"></span>
+                Available for opportunities
+            </div>
+            <h1 class="hero-title animate-fade-in-up">
+                <span class="greeting">Hi, I'm</span>
+                <span class="name-highlight">Dheer Gupta</span>
+            </h1>
+            <p class="hero-subtitle animate-fade-in-up delay-1">
+                <span class="typed-text"></span>
+                <span class="cursor">|</span>
+            </p>
+            <p class="hero-description animate-fade-in-up delay-2">
+                Building AI-powered solutions that transform raw data into actionable intelligence.
+                From voice AI systems handling 24/7 operations to threat intelligence platforms
+                processing 178K+ vulnerabilities.
+            </p>
+            <div class="hero-cta animate-fade-in-up delay-3">
                 <a href="#experience" class="btn btn-primary">
-                    <i class="fas fa-briefcase"></i>
-                    View Experience
+                    <span>View My Work</span>
+                    <i class="fas fa-arrow-right"></i>
                 </a>
-                <a href="#contact" class="btn btn-secondary">
-                    <i class="fas fa-envelope"></i>
-                    Get In Touch
+                <a href="#contact" class="btn btn-outline">
+                    <span>Get In Touch</span>
                 </a>
             </div>
+            <div class="hero-stats animate-fade-in-up delay-4">
+                <div class="stat">
+                    <span class="stat-number" data-count="178796">0</span>
+                    <span class="stat-label">Records Processed</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="98">0</span>
+                    <span class="stat-suffix">%</span>
+                    <span class="stat-label">F1-Score (XSS)</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="5">0</span>
+                    <span class="stat-label">Institutions Served</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="code-window animate-float">
+                <div class="window-header">
+                    <div class="window-dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <span class="window-title">threat_classifier.py</span>
+                </div>
+                <pre class="window-code"><code><span class="keyword">class</span> <span class="class">ThreatClassifier</span>:
+    <span class="keyword">def</span> <span class="function">__init__</span>(<span class="param">self</span>):
+        <span class="param">self</span>.model = RandomForest()
+        <span class="param">self</span>.encoder = SBERT()
+
+    <span class="keyword">def</span> <span class="function">classify</span>(<span class="param">self</span>, <span class="param">threat</span>):
+        embedding = <span class="param">self</span>.encoder.encode(threat)
+        <span class="keyword">return</span> <span class="param">self</span>.model.predict(embedding)
+
+<span class="comment"># F1-Score: 0.98 (XSS), 0.84 (SQLi)</span>
+<span class="comment"># Processed: 178,796 records</span></code></pre>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll to explore</span>
         </div>
     </section>
 
-    <section id="about">
+    <!-- About Section -->
+    <section class="about" id="about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <p class="about-intro">
-                    Recent Computer Science and Data Science graduate from Knox College with hands-on experience in backend development, AI/ML, and cyber threat intelligence.
-                </p>
-                <p class="about-text">
-                    I specialize in building scalable backend systems using FastAPI, designing database architectures, and developing AI-powered solutions. My recent work includes creating a cyber threat intelligence platform that analyzed 178K+ vulnerabilities with 87% precision, and building production-grade backend services for the MACRO Consortium's astronomy image management system.
-                </p>
-                <p class="about-text">
-                    I'm passionate about combining data science, machine learning, and software engineering to solve real-world problems. With experience in agile methodologies, microservices architecture, and stakeholder collaboration, I bring both technical expertise and professional software development practices to every project.
-                </p>
+            <div class="section-header">
+                <span class="section-tag">About Me</span>
+                <h2 class="section-title">Turning Data Into Decisions</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-content">
+                    <p class="about-lead">
+                        I'm a recent Computer Science and Data Science graduate from Knox College
+                        with a passion for building systems that make complex data actionable.
+                    </p>
+                    <p>
+                        My work spans AI-powered property management systems, cyber threat intelligence
+                        platforms, and astronomical data pipelines. I specialize in taking messy,
+                        real-world data and transforming it into systems that help people make
+                        better decisions faster.
+                    </p>
+                    <p>
+                        Whether it's helping security teams prioritize vulnerabilities with a 7x improvement
+                        in high-urgency detection, or enabling astronomers across 5 institutions to query
+                        14GB of nightly observation data in under 1 second, I focus on building solutions
+                        that deliver measurable impact.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-brain"></i>
+                            <div>
+                                <strong>AI/ML Engineering</strong>
+                                <span>Voice AI, NLP, Classification</span>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <strong>Cybersecurity</strong>
+                                <span>Threat Intelligence, CVE Analysis</span>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-database"></i>
+                            <div>
+                                <strong>Data Engineering</strong>
+                                <span>ETL Pipelines, Real-time Processing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-frame">
+                        <img src="me.jpg" alt="Dheer Gupta" loading="lazy">
+                        <div class="image-decoration"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="skills">
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
         <div class="container">
-            <h2 class="section-title">Skills & Expertise</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h3>
-                        <i class="fas fa-server"></i>
-                        Backend Development
-                    </h3>
-                    <div class="skill-list">
-                        <span class="skill-tag">FastAPI</span>
-                        <span class="skill-tag">REST APIs</span>
-                        <span class="skill-tag">MySQL</span>
-                        <span class="skill-tag">Database Design</span>
-                        <span class="skill-tag">Microservices</span>
-                        <span class="skill-tag">JWT</span>
-                        <span class="skill-tag">OAuth2</span>
-                        <span class="skill-tag">Docker</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <h3>
-                        <i class="fas fa-brain"></i>
-                        Data Science & AI
-                    </h3>
-                    <div class="skill-list">
-                        <span class="skill-tag">Machine Learning</span>
-                        <span class="skill-tag">NLP</span>
-                        <span class="skill-tag">Data Mining</span>
-                        <span class="skill-tag">Data Visualization</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Algorithms</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <h3>
-                        <i class="fas fa-shield-alt"></i>
-                        Cybersecurity
-                    </h3>
-                    <div class="skill-list">
-                        <span class="skill-tag">Threat Intelligence</span>
-                        <span class="skill-tag">Vulnerability Analysis</span>
-                        <span class="skill-tag">Security Risk Management</span>
-                        <span class="skill-tag">Ethical Hacking</span>
-                        <span class="skill-tag">RBAC</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <h3>
-                        <i class="fas fa-code"></i>
-                        Development Tools
-                    </h3>
-                    <div class="skill-list">
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">GitHub</span>
-                        <span class="skill-tag">Agile/SDLC</span>
-                        <span class="skill-tag">Godot Engine</span>
-                        <span class="skill-tag">GDScript</span>
-                        <span class="skill-tag">OOP</span>
-                    </div>
-                </div>
+            <div class="section-header">
+                <span class="section-tag">Experience</span>
+                <h2 class="section-title">Where I've Made Impact</h2>
             </div>
 
-            <h3 style="margin-top: 4rem; margin-bottom: 1.5rem; text-align: center; font-size: 1.75rem;">Certifications</h3>
-            <div class="cert-grid">
-                <div class="cert-card">
-                    <i class="fas fa-building"></i>
-                    <h4>Deloitte Cyber Job Simulation</h4>
-                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem;">Forage</p>
+            <!-- HomeRelay -->
+            <article class="experience-card featured" data-aos="fade-up">
+                <div class="card-header">
+                    <div class="card-icon startup">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="card-meta">
+                        <span class="card-type">Startup</span>
+                        <span class="card-date">Dec. 2024 - Present</span>
+                    </div>
                 </div>
-                <div class="cert-card">
-                    <i class="fas fa-database"></i>
-                    <h4>Data Mining Specialization</h4>
-                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem;">UIUC</p>
+                <div class="card-content">
+                    <h3 class="card-title">Founder & AI Engineer</h3>
+                    <p class="card-company">HomeRelay</p>
+                    <p class="card-subtitle">AI-Powered Property Maintenance Platform</p>
+
+                    <div class="card-problem">
+                        <h4><i class="fas fa-exclamation-circle"></i> The Problem</h4>
+                        <p>Property managers handle hundreds of tenant maintenance calls, including many after hours. Missed calls mean unhappy tenants, delayed repairs, and liability risks. Manual call logging and technician dispatch is time-consuming and error-prone.</p>
+                    </div>
+
+                    <div class="card-solution">
+                        <h4><i class="fas fa-lightbulb"></i> What I Built</h4>
+                        <p>An AI-powered platform where tenants call a property number, an AI voice agent answers 24/7, diagnoses the issue, creates a ticket, and auto-dispatches the right technician.</p>
+                    </div>
+
+                    <div class="card-details" id="homerelay-details">
+                        <div class="tech-stack">
+                            <h4><i class="fas fa-code"></i> Technical Implementation</h4>
+                            <div class="tech-grid">
+                                <div class="tech-item">
+                                    <span class="tech-label">Voice AI</span>
+                                    <span class="tech-value">Vapi (24/7 conversational agent)</span>
+                                </div>
+                                <div class="tech-item">
+                                    <span class="tech-label">Backend</span>
+                                    <span class="tech-value">Express.js, Node.js, TypeScript</span>
+                                </div>
+                                <div class="tech-item">
+                                    <span class="tech-label">Database</span>
+                                    <span class="tech-value">PostgreSQL, Prisma ORM</span>
+                                </div>
+                                <div class="tech-item">
+                                    <span class="tech-label">Frontend</span>
+                                    <span class="tech-value">Next.js, React, TailwindCSS</span>
+                                </div>
+                                <div class="tech-item">
+                                    <span class="tech-label">Auth</span>
+                                    <span class="tech-value">NextAuth.js, JWT, RBAC</span>
+                                </div>
+                                <div class="tech-item">
+                                    <span class="tech-label">DevOps</span>
+                                    <span class="tech-value">Docker, GitHub Actions, Vercel</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="outcomes">
+                            <h4><i class="fas fa-chart-line"></i> Actionable Outcomes</h4>
+                            <div class="outcomes-grid">
+                                <div class="outcome-category">
+                                    <h5>For Property Managers</h5>
+                                    <ul>
+                                        <li><strong>24/7 call coverage:</strong> No missed tenant calls. AI agent answers, gathers details, creates tickets automatically</li>
+                                        <li><strong>Instant categorization:</strong> AI extracts issue type, priority level, and unit number from natural conversation</li>
+                                        <li><strong>Auto dispatch:</strong> System matches issues to technicians by specialty, location, and schedule</li>
+                                        <li><strong>Real-time visibility:</strong> Dashboard shows open tickets, transcripts, technician status, and metrics</li>
+                                    </ul>
+                                </div>
+                                <div class="outcome-category">
+                                    <h5>For Technicians</h5>
+                                    <ul>
+                                        <li><strong>Mobile-first portal:</strong> View assignments, update status, manage availability</li>
+                                        <li><strong>Smart scheduling:</strong> Weekly availability editor, time-off requests, on-call toggling</li>
+                                        <li><strong>Performance tracking:</strong> Completion rates, resolution times, ratings</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="metrics">
+                            <h4><i class="fas fa-tachometer-alt"></i> Quantified Capabilities</h4>
+                            <div class="metrics-grid">
+                                <div class="metric-card">
+                                    <span class="metric-value">9</span>
+                                    <span class="metric-label">Issue Categories</span>
+                                    <span class="metric-detail">HVAC, Plumbing, Electrical, Appliance, Lockout, Pest, Structural, Landscaping, General</span>
+                                </div>
+                                <div class="metric-card">
+                                    <span class="metric-value">500</span>
+                                    <span class="metric-label">Events/Minute</span>
+                                    <span class="metric-detail">Webhook throughput capacity</span>
+                                </div>
+                                <div class="metric-card">
+                                    <span class="metric-value">3</span>
+                                    <span class="metric-label">User Portals</span>
+                                    <span class="metric-detail">Admin, Property Manager, Technician</span>
+                                </div>
+                                <div class="metric-card">
+                                    <span class="metric-value">4</span>
+                                    <span class="metric-label">Subscription Tiers</span>
+                                    <span class="metric-detail">Free, Basic, Pro, Enterprise</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="card-toggle" data-target="homerelay-details">
+                        <span class="toggle-text">Show Details</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
                 </div>
-                <div class="cert-card">
-                    <i class="fab fa-google"></i>
-                    <h4>Foundations of Cybersecurity</h4>
-                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem;">Google</p>
+                <div class="card-tags">
+                    <span class="tag">Voice AI</span>
+                    <span class="tag">TypeScript</span>
+                    <span class="tag">Next.js</span>
+                    <span class="tag">PostgreSQL</span>
+                    <span class="tag">Docker</span>
                 </div>
-                <div class="cert-card">
-                    <i class="fas fa-shield-alt"></i>
-                    <h4>Ethical Hacking from Scratch</h4>
-                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem;">Udemy</p>
+            </article>
+
+            <!-- CTI Platform -->
+            <article class="experience-card" data-aos="fade-up">
+                <div class="card-header">
+                    <div class="card-icon research">
+                        <i class="fas fa-shield-virus"></i>
+                    </div>
+                    <div class="card-meta">
+                        <span class="card-type">Research</span>
+                        <span class="card-date">Feb. 2025 - Jun. 2025</span>
+                    </div>
                 </div>
-            </div>
+                <div class="card-content">
+                    <h3 class="card-title">Data Science Researcher</h3>
+                    <p class="card-company">Knox College</p>
+                    <p class="card-subtitle">Cyber Threat Intelligence Platform</p>
+
+                    <div class="card-problem">
+                        <h4><i class="fas fa-exclamation-circle"></i> The Problem</h4>
+                        <p>Security teams face information overload with thousands of CVEs published yearly, scattered threat intelligence, and no clear prioritization. Manual triage is slow, leading to delayed patching of critical vulnerabilities.</p>
+                    </div>
+
+                    <div class="card-solution">
+                        <h4><i class="fas fa-lightbulb"></i> What I Built</h4>
+                        <p>An end-to-end automated threat intelligence pipeline that ingests vulnerability data, classifies threats, detects emerging attacks, and prioritizes CVEs for security teams.</p>
+                    </div>
+
+                    <div class="card-details" id="cti-details">
+                        <div class="tech-stack">
+                            <h4><i class="fas fa-code"></i> Technical Implementation</h4>
+                            <div class="tech-grid">
+                                <div class="tech-item">
+                                    <span class="tech-label">Data Ingestion</span>
+                                    <span class="tech-value">NVD API 2.0, Web Scraping</span>
+                                </div>
+                                <div class="tech-item">
+                                    <span class="tech-label">NLP Pipeline</span>
+                                    <span class="tech-value">NLTK, Regex, Custom Preprocessing</span>
+                                </div>
+                                <div class="tech-item">
+                                    <span class="tech-label">Classification</span>
+                                    <span class="tech-value">Random Forest, SBERT, TF-IDF</span>
+                                </div>
+                                <div class="tech-item">
+                                    <span class="tech-label">Anomaly Detection</span>
+                                    <span class="tech-value">Isolation Forest, Z-score</span>
+                                </div>
+                                <div class="tech-item">
+                                    <span class="tech-label">Visualization</span>
+                                    <span class="tech-value">Streamlit, Plotly Dashboard</span>
+                                </div>
+                                <div class="tech-item">
+                                    <span class="tech-label">Deployment</span>
+                                    <span class="tech-value">Docker Containerization</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="outcomes">
+                            <h4><i class="fas fa-chart-line"></i> Actionable Outcomes</h4>
+                            <ul>
+                                <li><strong>Automated threat categorization:</strong> Auto-labels threats as XSS, SQL Injection, Ransomware, etc., enabling filtered views by attack type</li>
+                                <li><strong>Prioritized patching queue:</strong> Urgency scores rank vulnerabilities so teams patch the most dangerous first</li>
+                                <li><strong>Early warning system:</strong> Anomaly detection flags zero-day indicators and mention spikes before widespread exploitation</li>
+                            </ul>
+                        </div>
+
+                        <div class="metrics">
+                            <h4><i class="fas fa-tachometer-alt"></i> Quantified Impact</h4>
+                            <div class="metrics-grid">
+                                <div class="metric-card highlight">
+                                    <span class="metric-value">7x</span>
+                                    <span class="metric-label">Improvement</span>
+                                    <span class="metric-detail">High-urgency detection: 4.7% to 32.5%</span>
+                                </div>
+                                <div class="metric-card">
+                                    <span class="metric-value">178,796</span>
+                                    <span class="metric-label">Records Processed</span>
+                                    <span class="metric-detail">CVEs and threat reports</span>
+                                </div>
+                                <div class="metric-card">
+                                    <span class="metric-value">0.98</span>
+                                    <span class="metric-label">F1-Score (XSS)</span>
+                                    <span class="metric-detail">1.00 precision, 0.96 recall</span>
+                                </div>
+                                <div class="metric-card">
+                                    <span class="metric-value">0.84</span>
+                                    <span class="metric-label">F1-Score (SQLi)</span>
+                                    <span class="metric-detail">0.84 precision, 0.84 recall</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="classification-table">
+                            <h4><i class="fas fa-table"></i> Classification Performance</h4>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Threat Category</th>
+                                        <th>Precision</th>
+                                        <th>Recall</th>
+                                        <th>F1-Score</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>XSS</td>
+                                        <td>1.00</td>
+                                        <td>0.96</td>
+                                        <td class="highlight">0.98</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Phishing</td>
+                                        <td>0.99</td>
+                                        <td>0.73</td>
+                                        <td class="highlight">0.84</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SQL Injection</td>
+                                        <td>0.84</td>
+                                        <td>0.84</td>
+                                        <td class="highlight">0.84</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Malware</td>
+                                        <td>0.97</td>
+                                        <td>0.73</td>
+                                        <td class="highlight">0.83</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Supply Chain</td>
+                                        <td>0.95</td>
+                                        <td>0.72</td>
+                                        <td class="highlight">0.82</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="urgency-system">
+                            <h4><i class="fas fa-sort-amount-up"></i> Urgency Scoring System</h4>
+                            <div class="urgency-factors">
+                                <div class="factor">
+                                    <span class="factor-weight">45%</span>
+                                    <span class="factor-name">CVSS Severity</span>
+                                </div>
+                                <div class="factor">
+                                    <span class="factor-weight">25%</span>
+                                    <span class="factor-name">Patch Status</span>
+                                </div>
+                                <div class="factor">
+                                    <span class="factor-weight">15%</span>
+                                    <span class="factor-name">Sentiment</span>
+                                </div>
+                                <div class="factor">
+                                    <span class="factor-weight">10%</span>
+                                    <span class="factor-name">Exploit Indicators</span>
+                                </div>
+                                <div class="factor">
+                                    <span class="factor-weight">5%</span>
+                                    <span class="factor-name">Recency</span>
+                                </div>
+                            </div>
+                            <div class="urgency-stats">
+                                <span><strong>Distribution:</strong> 12.1% Low | 55.3% Medium | 32.5% High</span>
+                                <span><strong>Embedding Speed:</strong> 1,447 texts/second</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="card-toggle" data-target="cti-details">
+                        <span class="toggle-text">Show Details</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+                <div class="card-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Machine Learning</span>
+                    <span class="tag">NLP</span>
+                    <span class="tag">SBERT</span>
+                    <span class="tag">Docker</span>
+                </div>
+            </article>
+
+            <!-- Astronomy -->
+            <article class="experience-card" data-aos="fade-up">
+                <div class="card-header">
+                    <div class="card-icon collaboration">
+                        <i class="fas fa-satellite"></i>
+                    </div>
+                    <div class="card-meta">
+                        <span class="card-type">Collaboration</span>
+                        <span class="card-date">Mar. 2025 - Jun. 2025</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Data Engineer</h3>
+                    <p class="card-company">MACRO Consortium</p>
+                    <p class="card-subtitle">Astronomy Image Management System</p>
+                    <p class="card-consortium">Macalester, Augustana, Coe, Knox College, University of Iowa</p>
+
+                    <div class="card-problem">
+                        <h4><i class="fas fa-exclamation-circle"></i> The Problem</h4>
+                        <p>The Robert L. Mutel Telescope generates hundreds of astronomical images nightly (~14GB per night). Without a centralized system, researchers across 5 institutions could not efficiently search, filter, or access observation data.</p>
+                    </div>
+
+                    <div class="card-solution">
+                        <h4><i class="fas fa-lightbulb"></i> What I Built</h4>
+                        <p>An automated astronomical data pipeline that ingests FITS images in real-time, extracts 40+ metadata parameters, scores image quality, and provides a searchable interface for researchers across all consortium institutions.</p>
+                    </div>
+
+                    <div class="card-details" id="astronomy-details">
+                        <div class="tech-stack">
+                            <h4><i class="fas fa-code"></i> Technical Implementation</h4>
+                            <div class="tech-grid">
+                                <div class="tech-item">
+                                    <span class="tech-label">Backend API</span>
+                                    <span class="tech-value">FastAPI, Python 3.12</span>
+                                </div>
+                                <div class="tech-item">
+                                    <span class="tech-label">Database</span>
+                                    <span class="tech-value">MySQL 8.0, SQLAlchemy</span>
+                                </div>
+                                <div class="tech-item">
+                                    <span class="tech-label">File Processing</span>
+                                    <span class="tech-value">Astropy (FITS extraction)</span>
+                                </div>
+                                <div class="tech-item">
+                                    <span class="tech-label">Auth</span>
+                                    <span class="tech-value">Google OAuth 2.0, JWT</span>
+                                </div>
+                                <div class="tech-item">
+                                    <span class="tech-label">Monitoring</span>
+                                    <span class="tech-value">Watchdog (real-time detection)</span>
+                                </div>
+                                <div class="tech-item">
+                                    <span class="tech-label">Infrastructure</span>
+                                    <span class="tech-value">Docker, Nginx, 5 microservices</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="outcomes">
+                            <h4><i class="fas fa-chart-line"></i> Actionable Outcomes</h4>
+                            <div class="outcomes-grid">
+                                <div class="outcome-category">
+                                    <h5>For Astronomers/Researchers</h5>
+                                    <ul>
+                                        <li><strong>Instant data access:</strong> Query observations by date, filter type, temperature, quality score, target object in &lt;1 second</li>
+                                        <li><strong>Quality filtering:</strong> Automated scoring flags research-grade images so astronomers focus on usable data</li>
+                                        <li><strong>Cross-institutional access:</strong> Students and faculty from all 5 MACRO schools query the same centralized database</li>
+                                    </ul>
+                                </div>
+                                <div class="outcome-category">
+                                    <h5>For Observatory Operations</h5>
+                                    <ul>
+                                        <li><strong>Zero-touch ingestion:</strong> New observation files detected and processed automatically</li>
+                                        <li><strong>Continuous operation:</strong> Designed for robotic telescope running unattended multi-night campaigns</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="metrics">
+                            <h4><i class="fas fa-tachometer-alt"></i> Quantified Capabilities</h4>
+                            <div class="metrics-grid">
+                                <div class="metric-card">
+                                    <span class="metric-value">~14GB</span>
+                                    <span class="metric-label">Nightly Data</span>
+                                    <span class="metric-detail">400-500 FITS images per night</span>
+                                </div>
+                                <div class="metric-card">
+                                    <span class="metric-value">40+</span>
+                                    <span class="metric-label">Parameters</span>
+                                    <span class="metric-detail">Metadata extracted per image</span>
+                                </div>
+                                <div class="metric-card">
+                                    <span class="metric-value">&lt;1s</span>
+                                    <span class="metric-label">Query Time</span>
+                                    <span class="metric-detail">Multi-parameter search response</span>
+                                </div>
+                                <div class="metric-card">
+                                    <span class="metric-value">100%</span>
+                                    <span class="metric-label">Accuracy</span>
+                                    <span class="metric-detail">Metadata extraction accuracy</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="quality-scoring">
+                            <h4><i class="fas fa-star"></i> Quality Scoring Algorithm</h4>
+                            <div class="scoring-factors">
+                                <div class="score-item">
+                                    <span class="score-points">+20</span>
+                                    <span class="score-factor">Exposure time &gt;30s</span>
+                                </div>
+                                <div class="score-item">
+                                    <span class="score-points">+20</span>
+                                    <span class="score-factor">Airmass &lt;1.5</span>
+                                </div>
+                                <div class="score-item">
+                                    <span class="score-points">+30</span>
+                                    <span class="score-factor">Science frame type</span>
+                                </div>
+                                <div class="score-item">
+                                    <span class="score-points">+10</span>
+                                    <span class="score-factor">Standard filter (R,G,B,L)</span>
+                                </div>
+                            </div>
+                            <p class="score-threshold">Quality flag = True when score ≥ 60%</p>
+                        </div>
+                    </div>
+
+                    <button class="card-toggle" data-target="astronomy-details">
+                        <span class="toggle-text">Show Details</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+                <div class="card-tags">
+                    <span class="tag">FastAPI</span>
+                    <span class="tag">MySQL</span>
+                    <span class="tag">Astropy</span>
+                    <span class="tag">Docker</span>
+                    <span class="tag">OAuth2</span>
+                </div>
+            </article>
+
+            <!-- Mercor -->
+            <article class="experience-card" data-aos="fade-up">
+                <div class="card-header">
+                    <div class="card-icon contract">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="card-meta">
+                        <span class="card-type">Contract</span>
+                        <span class="card-date">Dec. 2025 - Jan. 2026</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Digital Annotation Expert</h3>
+                    <p class="card-company">Mercor</p>
+                    <p class="card-subtitle">AI Training Data & Model Evaluation</p>
+
+                    <div class="card-solution">
+                        <h4><i class="fas fa-lightbulb"></i> What I Did</h4>
+                        <p>Evaluated and annotated multimodal AI outputs (audio, images, video) to improve model accuracy and reliability for production AI systems.</p>
+                    </div>
+
+                    <div class="card-details" id="mercor-details">
+                        <div class="ai-relevance">
+                            <h4><i class="fas fa-brain"></i> AI/ML Significance</h4>
+                            <div class="relevance-grid">
+                                <div class="relevance-item">
+                                    <span class="relevance-task">Evaluate AI-generated outputs</span>
+                                    <span class="relevance-impact">Model quality assessment</span>
+                                </div>
+                                <div class="relevance-item">
+                                    <span class="relevance-task">Compare results, select best</span>
+                                    <span class="relevance-impact">RLHF pipeline contribution</span>
+                                </div>
+                                <div class="relevance-item">
+                                    <span class="relevance-task">Tag/annotate multimedia</span>
+                                    <span class="relevance-impact">Training data creation</span>
+                                </div>
+                                <div class="relevance-item">
+                                    <span class="relevance-task">Follow consistency guidelines</span>
+                                    <span class="relevance-impact">Data quality assurance</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="outcomes">
+                            <h4><i class="fas fa-chart-line"></i> Actionable Outcomes</h4>
+                            <ul>
+                                <li><strong>Training data creation:</strong> Tagged and annotated multimedia content used to train multimodal AI systems</li>
+                                <li><strong>Model evaluation:</strong> Compared AI-generated results and selected highest quality outputs, contributing to RLHF feedback loops</li>
+                                <li><strong>Quality assurance:</strong> Maintained consistency in AI training data following project guidelines</li>
+                                <li><strong>Multimodal AI improvement:</strong> Directly contributed to improving accuracy and reliability of production AI systems</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <button class="card-toggle" data-target="mercor-details">
+                        <span class="toggle-text">Show Details</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+                <div class="card-tags">
+                    <span class="tag">RLHF</span>
+                    <span class="tag">Data Annotation</span>
+                    <span class="tag">Multimodal AI</span>
+                    <span class="tag">Quality Assurance</span>
+                </div>
+            </article>
+
+            <!-- ITS Lab Assistant -->
+            <article class="experience-card" data-aos="fade-up">
+                <div class="card-header">
+                    <div class="card-icon support">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <div class="card-meta">
+                        <span class="card-type">Part-time</span>
+                        <span class="card-date">Sep. 2022 - Jun. 2025</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">ITS Lab Assistant</h3>
+                    <p class="card-company">Knox College</p>
+                    <p class="card-subtitle">Information Technology Services</p>
+
+                    <div class="card-solution">
+                        <h4><i class="fas fa-lightbulb"></i> What I Did</h4>
+                        <p>Provided technical support across 5 campus computer labs for nearly 3 years, troubleshooting hardware, software, and network issues for students and faculty.</p>
+                    </div>
+
+                    <div class="card-details" id="its-details">
+                        <div class="responsibilities">
+                            <h4><i class="fas fa-tasks"></i> Responsibilities</h4>
+                            <ul>
+                                <li><strong>Technical troubleshooting:</strong> Diagnosed and resolved hardware, software, and network connectivity issues across Windows and Mac systems</li>
+                                <li><strong>User support:</strong> Assisted users with printing, login issues, application problems, and general IT inquiries</li>
+                                <li><strong>Network troubleshooting:</strong> Identified and resolved connectivity issues, escalating complex problems to network administrators</li>
+                                <li><strong>Access management:</strong> Routed IAM and access control issues to IT administrators; directed users to Help Desk for ticket generation</li>
+                            </ul>
+                        </div>
+
+                        <div class="skills-gained">
+                            <h4><i class="fas fa-graduation-cap"></i> Skills Demonstrated</h4>
+                            <div class="skills-list">
+                                <span class="skill-item">Technical Troubleshooting</span>
+                                <span class="skill-item">Customer Service</span>
+                                <span class="skill-item">Problem Escalation</span>
+                                <span class="skill-item">IT Ticketing Workflows</span>
+                                <span class="skill-item">Multi-platform Support</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="card-toggle" data-target="its-details">
+                        <span class="toggle-text">Show Details</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+                <div class="card-tags">
+                    <span class="tag">Technical Support</span>
+                    <span class="tag">Problem Solving</span>
+                    <span class="tag">Windows</span>
+                    <span class="tag">Mac</span>
+                </div>
+            </article>
         </div>
     </section>
 
-    <section id="experience">
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
         <div class="container">
-            <h2 class="section-title">Work Experience</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">
+            <div class="section-header">
+                <span class="section-tag">Skills</span>
+                <h2 class="section-title">Technical Expertise</h2>
+            </div>
+
+            <div class="skills-container">
+                <div class="skill-category" data-aos="fade-up">
+                    <div class="category-header">
+                        <div class="category-icon">
                             <i class="fas fa-brain"></i>
                         </div>
-                        <div>
-                            <h3>Data Science Researcher</h3>
-                            <p style="color: var(--text-secondary); font-size: 0.95rem; margin: 0;">Knox College | Feb 2025 - Jun 2025</p>
-                        </div>
+                        <h3>Data Science & ML</h3>
                     </div>
-                    <p style="font-weight: 600; color: var(--primary); margin-bottom: 0.75rem;">Cyber Threat Intelligence Platform</p>
-                    <p>Developed an AI-powered system that transforms raw vulnerability data and threat reports into actionable cyber intelligence for faster, more accurate security decisions.</p>
-                    <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary); line-height: 1.8;">
-                        <li>Analyzed 178K+ vulnerabilities and 2.5K+ news articles using machine learning and NLP</li>
-                        <li>Achieved 87% precision in threat classification and scoring</li>
-                        <li>Built custom data pipelines and scrapers for real-time intelligence collection</li>
-                        <li>Deployed interactive dashboard for security teams</li>
-                        <li>Containerized system with Docker for scalable deployment</li>
+                    <ul class="skill-list">
+                        <li>Multi-label Classification (Random Forest, One-vs-Rest)</li>
+                        <li>Anomaly Detection (Isolation Forest, Z-score)</li>
+                        <li>NLP Pipelines (TF-IDF, SBERT, Text Preprocessing)</li>
+                        <li>Feature Engineering (Hybrid Text + Numeric)</li>
+                        <li>Model Evaluation & Benchmarking</li>
+                        <li>AI Training Data Annotation (RLHF)</li>
                     </ul>
-                    <div class="project-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">Machine Learning</span>
-                        <span class="tag">NLP</span>
-                        <span class="tag">Docker</span>
-                        <span class="tag">Data Pipelines</span>
-                    </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-server"></i>
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-shield-alt"></i>
                         </div>
-                        <div>
-                            <h3>Backend Developer</h3>
-                            <p style="color: var(--text-secondary); font-size: 0.95rem; margin: 0;">Knox College - MACRO Consortium | Mar 2025 - Jun 2025</p>
-                        </div>
+                        <h3>Cybersecurity</h3>
                     </div>
-                    <p style="font-weight: 600; color: var(--primary); margin-bottom: 0.75rem;">Astronomy Image Management System</p>
-                    <p>Served as backend developer on a professional-style software engineering project, working in agile sprints with stakeholder meetings and milestone-based reviews.</p>
-                    <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary); line-height: 1.8;">
-                        <li>Built backend services in FastAPI with endpoints for image ingestion, metadata retrieval, and search</li>
-                        <li>Designed database schema for telescope FITS image metadata</li>
-                        <li>Integrated secure role-based authentication with Google OAuth2 and JWT</li>
-                        <li>Contributed to Dockerized microservices architecture</li>
-                        <li>Practiced agile workflows with sprint planning, stand-ups, and demos</li>
+                    <ul class="skill-list">
+                        <li>CVE/NVD Data Analysis</li>
+                        <li>Threat Categorization (XSS, SQLi, Ransomware)</li>
+                        <li>Vulnerability Prioritization</li>
+                        <li>Emerging Threat Detection</li>
+                        <li>Security Risk Management</li>
                     </ul>
-                    <div class="project-tags">
-                        <span class="tag">FastAPI</span>
-                        <span class="tag">MySQL</span>
-                        <span class="tag">OAuth2</span>
-                        <span class="tag">Docker</span>
-                        <span class="tag">Agile</span>
-                    </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-gamepad"></i>
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-database"></i>
                         </div>
-                        <div>
-                            <h3>Co-Founder & Game Developer</h3>
-                            <p style="color: var(--text-secondary); font-size: 0.95rem; margin: 0;">Midnight | Jan 2025 - Mar 2025</p>
-                        </div>
+                        <h3>Data Engineering</h3>
                     </div>
-                    <p style="font-weight: 600; color: var(--primary); margin-bottom: 0.75rem;">2D Game with AI-Driven Behaviors</p>
-                    <p>Co-founded Midnight, a 2D game built in Godot with AI-driven enemy behavior and modern software development workflows.</p>
-                    <ul style="margin: 1rem 0; padding-left: 1.5rem; color: var(--text-secondary); line-height: 1.8;">
-                        <li>Built AI-driven enemy behaviors including pathfinding and adaptive interactions</li>
-                        <li>Designed gameplay mechanics with scalable scene architecture in Godot 4</li>
-                        <li>Managed full project lifecycle through GitHub</li>
-                        <li>Worked in startup-style workflow with self-directed sprints and milestones</li>
+                    <ul class="skill-list">
+                        <li>ETL Pipelines at Scale</li>
+                        <li>Parallel Processing (ThreadPoolExecutor)</li>
+                        <li>Real-time Data Ingestion</li>
+                        <li>Database Optimization (Pooling, Indexing)</li>
+                        <li>API Design (REST, FastAPI)</li>
                     </ul>
-                    <div class="project-tags">
-                        <span class="tag">Godot Engine</span>
-                        <span class="tag">GDScript</span>
-                        <span class="tag">AI</span>
-                        <span class="tag">Git</span>
-                    </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-laptop"></i>
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-microchip"></i>
                         </div>
+                        <h3>AI/ML Engineering</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li>Voice AI Integration (Vapi)</li>
+                        <li>NLP for Entity Extraction</li>
+                        <li>Classification Pipelines</li>
+                        <li>Sentiment Analysis</li>
+                        <li>Multimodal AI Evaluation</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tech-tools" data-aos="fade-up">
+                <h3>Tools & Technologies</h3>
+                <div class="tools-grid">
+                    <div class="tool-item">
+                        <i class="fab fa-python"></i>
+                        <span>Python</span>
+                    </div>
+                    <div class="tool-item">
+                        <i class="fab fa-js-square"></i>
+                        <span>TypeScript</span>
+                    </div>
+                    <div class="tool-item">
+                        <i class="fab fa-node-js"></i>
+                        <span>Node.js</span>
+                    </div>
+                    <div class="tool-item">
+                        <i class="fas fa-database"></i>
+                        <span>PostgreSQL</span>
+                    </div>
+                    <div class="tool-item">
+                        <i class="fas fa-database"></i>
+                        <span>MySQL</span>
+                    </div>
+                    <div class="tool-item">
+                        <i class="fab fa-docker"></i>
+                        <span>Docker</span>
+                    </div>
+                    <div class="tool-item">
+                        <i class="fab fa-react"></i>
+                        <span>React/Next.js</span>
+                    </div>
+                    <div class="tool-item">
+                        <i class="fas fa-bolt"></i>
+                        <span>FastAPI</span>
+                    </div>
+                    <div class="tool-item">
+                        <i class="fab fa-git-alt"></i>
+                        <span>Git</span>
+                    </div>
+                    <div class="tool-item">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Streamlit</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="certifications" data-aos="fade-up">
+                <h3>Certifications</h3>
+                <div class="cert-grid">
+                    <div class="cert-item">
+                        <i class="fas fa-building"></i>
                         <div>
-                            <h3>ITS Lab Assistant</h3>
-                            <p style="color: var(--text-secondary); font-size: 0.95rem; margin: 0;">Knox College | Sep 2022 - Jun 2025</p>
+                            <strong>Deloitte Cyber Job Simulation</strong>
+                            <span>Forage</span>
                         </div>
                     </div>
-                    <p>Managed the assigned computer lab and provided technical support to staff and students, resolving 20+ technical issues daily with creative problem-solving skills.</p>
-                    <div class="project-tags">
-                        <span class="tag">Technical Support</span>
-                        <span class="tag">Problem Solving</span>
+                    <div class="cert-item">
+                        <i class="fas fa-database"></i>
+                        <div>
+                            <strong>Data Mining Specialization</strong>
+                            <span>UIUC</span>
+                        </div>
+                    </div>
+                    <div class="cert-item">
+                        <i class="fab fa-google"></i>
+                        <div>
+                            <strong>Foundations of Cybersecurity</strong>
+                            <span>Google</span>
+                        </div>
+                    </div>
+                    <div class="cert-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <div>
+                            <strong>Ethical Hacking from Scratch</strong>
+                            <span>Udemy</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact">
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <p class="contact-intro">
-                    Interested in working together or have a question? Feel free to reach out!
-                </p>
-                
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/dheer-gupta-78b08798" class="social-link" target="_blank" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin fa-lg"></i>
-                    </a>
-                    <a href="https://github.com/dgupta40" class="social-link" target="_blank" aria-label="GitHub">
-                        <i class="fab fa-github fa-lg"></i>
-                    </a>
-                    <a href="mailto:dheer.gupta11@gmail.com" class="social-link" aria-label="Email">
-                        <i class="fas fa-envelope fa-lg"></i>
-                    </a>
+            <div class="section-header">
+                <span class="section-tag">Contact</span>
+                <h2 class="section-title">Let's Connect</h2>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info" data-aos="fade-right">
+                    <p class="contact-intro">
+                        I'm currently open to full-time opportunities in Data Science, AI/ML Engineering,
+                        and Cybersecurity. If you're looking for someone who can turn complex data into
+                        actionable systems, let's talk.
+                    </p>
+
+                    <div class="contact-methods">
+                        <a href="mailto:dheer.gupta11@gmail.com" class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <span>dheer.gupta11@gmail.com</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/dheer-gupta-78b08798" target="_blank" class="contact-method">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn Profile</span>
+                        </a>
+                        <a href="https://github.com/dgupta40" target="_blank" class="contact-method">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub: dgupta40</span>
+                        </a>
+                    </div>
                 </div>
 
-                <form class="contact-form" id="contactForm" action="https://formspree.io/f/xldpaerw" method="POST">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" required></textarea>
-                    </div>
-                    
-                    <!-- Hidden fields for Formspree -->
-                    <input type="hidden" name="_subject" value="New contact from portfolio - Dheer Gupta">
-                    
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">
-                        <i class="fas fa-paper-plane"></i>
-                        Send Message
-                    </button>
-                    
-                    <!-- Result message will appear here -->
-                    <div id="form-result"></div>
-                </form>
+                <div class="contact-form-wrapper" data-aos="fade-left">
+                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/xldpaerw" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="your@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required placeholder="How can I help you?"></textarea>
+                        </div>
+                        <input type="hidden" name="_subject" value="New contact from portfolio - Dheer Gupta">
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                        <div id="form-result"></div>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer>
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Dheer Gupta. All rights reserved.</p>
-            <p style="margin-top: 0.5rem;">Data Science Researcher | Backend Developer | Knox College Graduate</p>
+            <div class="footer-content">
+                <p>&copy; 2025 Dheer Gupta. Built with passion.</p>
+                <div class="footer-links">
+                    <a href="https://github.com/dgupta40" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/dheer-gupta-78b08798" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:dheer.gupta11@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
         </div>
     </footer>
 
