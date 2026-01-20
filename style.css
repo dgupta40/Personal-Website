@@ -1570,6 +1570,161 @@ section {
 }
 
 /* ============================================
+   PROJECTS SECTION
+   ============================================ */
+.projects {
+    padding: var(--space-3xl) 0;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--space-xl);
+}
+
+.project-card {
+    background: var(--bg-card);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    padding: var(--space-xl);
+    transition: all var(--transition-base);
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    border-color: var(--border-hover);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+}
+
+.project-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: var(--space-lg);
+}
+
+.project-icon.cybersecurity {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+}
+
+.project-icon.data-science {
+    background: linear-gradient(135deg, #06b6d4, #3b82f6);
+}
+
+.project-icon.data-engineering {
+    background: linear-gradient(135deg, #10b981, #06b6d4);
+}
+
+.project-icon.graphics {
+    background: linear-gradient(135deg, #f59e0b, #ef4444);
+}
+
+.project-icon.backend {
+    background: linear-gradient(135deg, #64748b, #475569);
+}
+
+.project-icon.game {
+    background: linear-gradient(135deg, #ec4899, #8b5cf6);
+}
+
+.project-icon.functional {
+    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+}
+
+.project-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: var(--space-sm);
+}
+
+.project-description {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: var(--space-lg);
+}
+
+.project-features {
+    margin-bottom: var(--space-lg);
+    flex: 1;
+}
+
+.project-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.project-features li {
+    position: relative;
+    padding-left: var(--space-lg);
+    margin-bottom: var(--space-sm);
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.project-features li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 6px;
+    height: 6px;
+    background: var(--primary);
+    border-radius: 50%;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    margin-bottom: var(--space-lg);
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-lg);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.875rem;
+    transition: all var(--transition-base);
+    margin-top: auto;
+    width: fit-content;
+}
+
+.project-link:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: white;
+}
+
+.project-link i {
+    font-size: 1rem;
+}
+
+/* ============================================
    FOOTER
    ============================================ */
 .footer {
@@ -1738,6 +1893,32 @@ html, body {
 
     .section-title {
         font-size: 1.75rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        padding: var(--space-lg);
+    }
+
+    .project-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 1.25rem;
+    }
+
+    .project-title {
+        font-size: 1.1rem;
+    }
+
+    .project-description {
+        font-size: 0.9rem;
+    }
+
+    .project-features li {
+        font-size: 0.85rem;
     }
 
     .metrics-grid {

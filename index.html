@@ -24,6 +24,7 @@
             <ul class="nav-menu">
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
@@ -746,6 +747,345 @@
                     <span class="tag">Mac</span>
                 </div>
             </article>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Projects</span>
+                <h2 class="section-title">What I've Built</h2>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Cyber Threat Intelligence -->
+                <article class="project-card" data-aos="fade-up">
+                    <div class="project-icon cybersecurity">
+                        <i class="fas fa-shield-virus"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Cyber Threat Intelligence</h3>
+                        <p class="project-description">Automated pipeline for gathering and analyzing cybersecurity vulnerability information from NVD API and security news sources.</p>
+                        <div class="project-features">
+                            <ul>
+                                <li>Data collection with incremental CVE record retrieval</li>
+                                <li>HTML cleaning, PII masking, CVSS severity extraction</li>
+                                <li>Multi-vector threat categorization with urgency metrics</li>
+                                <li>Zero-day detection and statistical anomaly detection</li>
+                                <li>Streamlit dashboard for threat visualization</li>
+                            </ul>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">NLP</span>
+                            <span class="tag">Streamlit</span>
+                        </div>
+                        <a href="https://github.com/dgupta40/cyber-threat-intelligence" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Astronomy Image Management System -->
+                <article class="project-card" data-aos="fade-up">
+                    <div class="project-icon data-engineering">
+                        <i class="fas fa-satellite"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Astronomy Image Management System</h3>
+                        <p class="project-description">Microservices architecture for processing FITS astronomical images for the MACRO Consortium (5 universities).</p>
+                        <div class="project-features">
+                            <ul>
+                                <li>5 Docker containers: Frontend, API, Database, File Watcher, Ingestion</li>
+                                <li>FastAPI REST service with MySQL 8.0 database</li>
+                                <li>FITS file processing extracting 40+ astronomical parameters</li>
+                                <li>Google OAuth 2.0 + JWT with role-based access control</li>
+                                <li>Advanced filtering by date, temperature, quality thresholds</li>
+                            </ul>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">OAuth2</span>
+                        </div>
+                        <a href="https://github.com/dgupta40/Astronomy-Image-Management-System" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Yelp Data Mining -->
+                <article class="project-card" data-aos="fade-up">
+                    <div class="project-icon data-science">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Yelp Data Mining Project</h3>
+                        <p class="project-description">Data mining and analysis of Yelp reviews to discover cuisines, popular dishes, restaurant recommendations, and hygiene predictions.</p>
+                        <div class="project-features">
+                            <ul>
+                                <li>Exploratory Topic Modeling with LDA/PLSA</li>
+                                <li>Cuisine Similarity Analysis using TF-IDF and clustering</li>
+                                <li>Dish Recognition with phrase-mining algorithms</li>
+                                <li>Hygiene Prediction using logistic regression, SVM, ensemble methods</li>
+                                <li>Restaurant Recommendations based on food preferences</li>
+                            </ul>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">NLP</span>
+                            <span class="tag">Data Mining</span>
+                        </div>
+                        <a href="https://github.com/dgupta40/yelp-data-mining-project" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Netflix Recommendation System -->
+                <article class="project-card" data-aos="fade-up">
+                    <div class="project-icon data-science">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Netflix Recommendation System</h3>
+                        <p class="project-description">Content-based recommendation system analyzing 8,800+ Netflix titles with ensemble ranking methods.</p>
+                        <div class="project-features">
+                            <ul>
+                                <li>Feature Engineering: Genre encoding, numerical normalization</li>
+                                <li>Algorithms: Cosine similarity, k-NN, Gaussian Naive Bayes (84% accuracy)</li>
+                                <li>K-Means clustering and association rule mining</li>
+                                <li>Google Sheets integration for real-time personalization</li>
+                                <li>Ensemble ranking combining multiple methods for top-10 recommendations</li>
+                            </ul>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Scikit-learn</span>
+                            <span class="tag">Jupyter</span>
+                            <span class="tag">ML</span>
+                        </div>
+                        <a href="https://github.com/dgupta40/Netflix-Content-Based-Recommendation-System" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Data Breaches Research -->
+                <article class="project-card" data-aos="fade-up">
+                    <div class="project-icon cybersecurity">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Data Breaches Severity Research</h3>
+                        <p class="project-description">Research paper investigating factors that determine the severity of data breaches in companies.</p>
+                        <div class="project-features">
+                            <ul>
+                                <li>Analysis of variables influencing breach severity</li>
+                                <li>Statistical analysis of breach data patterns</li>
+                                <li>Identification of key risk factors for organizations</li>
+                                <li>Recommendations for breach prevention strategies</li>
+                            </ul>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Research</span>
+                            <span class="tag">Cybersecurity</span>
+                            <span class="tag">Data Analysis</span>
+                        </div>
+                        <a href="https://github.com/dgupta40/Factors-Influencing-the-Severity-of-Data-Breaches-in-Companies" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Solar System -->
+                <article class="project-card" data-aos="fade-up">
+                    <div class="project-icon graphics">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Solar System 3D</h3>
+                        <p class="project-description">Interactive 3D model of the Solar System built with WebGL, featuring realistic planetary textures and orbits.</p>
+                        <div class="project-features">
+                            <ul>
+                                <li>Real-time 3D rendering with WebGL</li>
+                                <li>Accurate planetary textures and relative sizing</li>
+                                <li>Interactive camera controls and orbit visualization</li>
+                                <li>Custom sphere geometry and shading</li>
+                            </ul>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">WebGL</span>
+                            <span class="tag">3D Graphics</span>
+                        </div>
+                        <a href="https://github.com/dgupta40/Solar-System" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Vapi Webhook -->
+                <article class="project-card" data-aos="fade-up">
+                    <div class="project-icon backend">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Vapi Webhook Handler</h3>
+                        <p class="project-description">Backend webhook handler for Vapi API services, deployed on Vercel for voice AI integrations.</p>
+                        <div class="project-features">
+                            <ul>
+                                <li>Node.js and Express 5.1.0 backend</li>
+                                <li>Webhook event processing and routing</li>
+                                <li>Deployed on Vercel for serverless execution</li>
+                                <li>Integration with voice AI services</li>
+                            </ul>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Node.js</span>
+                            <span class="tag">Express</span>
+                            <span class="tag">Vercel</span>
+                            <span class="tag">API</span>
+                        </div>
+                        <a href="https://github.com/dgupta40/vapi-webhook" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Midnight Game -->
+                <article class="project-card" data-aos="fade-up">
+                    <div class="project-icon game">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Midnight</h3>
+                        <p class="project-description">2D game built with Godot Engine featuring AI-driven enemy behaviors. Team project for CS 292.</p>
+                        <div class="project-features">
+                            <ul>
+                                <li>Godot Engine game development</li>
+                                <li>AI-driven enemy pathfinding and behaviors</li>
+                                <li>Collaborative team development (4 members)</li>
+                                <li>Scene-based architecture design</li>
+                            </ul>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Godot</span>
+                            <span class="tag">GDScript</span>
+                            <span class="tag">Game Dev</span>
+                        </div>
+                        <a href="https://github.com/dgupta40/Midnight" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Minesweeper -->
+                <article class="project-card" data-aos="fade-up">
+                    <div class="project-icon game">
+                        <i class="fas fa-bomb"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Minesweeper</h3>
+                        <p class="project-description">Classic Minesweeper game implementation with clean UI and game logic.</p>
+                        <div class="project-features">
+                            <ul>
+                                <li>Complete Minesweeper game mechanics</li>
+                                <li>Recursive cell reveal algorithm</li>
+                                <li>Difficulty levels and timer</li>
+                            </ul>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Game</span>
+                            <span class="tag">Algorithms</span>
+                        </div>
+                        <a href="https://github.com/dgupta40/Minesweeper" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Haskell Tic-Tac-Toe -->
+                <article class="project-card" data-aos="fade-up">
+                    <div class="project-icon functional">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Haskell Tic-Tac-Toe</h3>
+                        <p class="project-description">Tic-Tac-Toe game implemented in Haskell, demonstrating functional programming paradigms.</p>
+                        <div class="project-features">
+                            <ul>
+                                <li>Pure functional implementation</li>
+                                <li>Pattern matching and recursion</li>
+                                <li>Immutable game state management</li>
+                            </ul>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Haskell</span>
+                            <span class="tag">Functional</span>
+                        </div>
+                        <a href="https://github.com/dgupta40/Haskell--Tic-Tac-Toe" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Simple HTTP Server -->
+                <article class="project-card" data-aos="fade-up">
+                    <div class="project-icon backend">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Simple HTTP Server</h3>
+                        <p class="project-description">Basic HTTP server implementation demonstrating networking and protocol handling.</p>
+                        <div class="project-features">
+                            <ul>
+                                <li>HTTP request parsing and response handling</li>
+                                <li>Socket programming fundamentals</li>
+                                <li>Static file serving capabilities</li>
+                            </ul>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Networking</span>
+                            <span class="tag">HTTP</span>
+                        </div>
+                        <a href="https://github.com/dgupta40/Simple-Http-Server-" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </article>
+
+                <!-- PentestGPT -->
+                <article class="project-card" data-aos="fade-up">
+                    <div class="project-icon cybersecurity">
+                        <i class="fas fa-user-secret"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">PentestGPT</h3>
+                        <p class="project-description">A GPT-empowered penetration testing tool for automated security assessments (fork).</p>
+                        <div class="project-features">
+                            <ul>
+                                <li>AI-assisted vulnerability discovery</li>
+                                <li>Automated penetration testing workflows</li>
+                                <li>Integration with security tools</li>
+                            </ul>
+                        </div>
+                        <div class="project-tags">
+                            <span class="tag">Security</span>
+                            <span class="tag">AI</span>
+                            <span class="tag">Pentesting</span>
+                        </div>
+                        <a href="https://github.com/dgupta40/PentestGPT" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> View on GitHub
+                        </a>
+                    </div>
+                </article>
+            </div>
         </div>
     </section>
 
