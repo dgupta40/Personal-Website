@@ -1617,6 +1617,13 @@ section {
 /* ============================================
    RESPONSIVE DESIGN
    ============================================ */
+
+/* Fix horizontal overflow globally */
+html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
 @media (max-width: 1024px) {
     .hero {
         grid-template-columns: 1fr;
@@ -1630,6 +1637,7 @@ section {
 
     .hero-visual {
         order: 0;
+        display: none; /* Hide code window on tablet/mobile */
     }
 
     .hero-description {
@@ -1658,6 +1666,10 @@ section {
     .contact-grid {
         grid-template-columns: 1fr;
         gap: var(--space-2xl);
+    }
+
+    .scroll-indicator {
+        display: none;
     }
 }
 
@@ -1688,17 +1700,44 @@ section {
         display: flex;
     }
 
+    .hero {
+        min-height: auto;
+        padding: 6rem var(--space-md) var(--space-2xl);
+    }
+
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.25rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.25rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
     }
 
     .hero-stats {
         flex-direction: column;
         gap: var(--space-lg);
+        align-items: center;
     }
 
-    .code-window {
-        max-width: 100%;
+    .stat {
+        text-align: center;
+    }
+
+    .stat-number {
+        font-size: 1.75rem;
+    }
+
+    .hero-badge {
+        font-size: 0.8rem;
+        padding: var(--space-xs) var(--space-md);
+    }
+
+    .section-title {
+        font-size: 1.75rem;
     }
 
     .metrics-grid {
@@ -1714,6 +1753,53 @@ section {
         gap: var(--space-md);
         text-align: center;
     }
+
+    .experience-card {
+        padding: var(--space-lg);
+    }
+
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-md);
+    }
+
+    .card-meta {
+        text-align: left;
+    }
+
+    .card-title {
+        font-size: 1.25rem;
+    }
+
+    .outcomes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .tools-grid {
+        gap: var(--space-sm);
+    }
+
+    .tool-item {
+        padding: var(--space-md);
+        min-width: 80px;
+    }
+
+    .tool-item i {
+        font-size: 1.5rem;
+    }
+
+    .tool-item span {
+        font-size: 0.75rem;
+    }
+
+    .cert-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1721,30 +1807,251 @@ section {
         padding: 0 var(--space-md);
     }
 
+    .nav-container {
+        padding: 0 var(--space-md);
+    }
+
     .hero {
-        padding: 6rem var(--space-md) var(--space-2xl);
+        padding: 5rem var(--space-md) var(--space-xl);
     }
 
     .hero-title {
-        font-size: 2rem;
+        font-size: 1.75rem;
+    }
+
+    .greeting {
+        font-size: 0.5em;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        min-height: 2rem;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+        line-height: 1.7;
     }
 
     .hero-cta {
         flex-direction: column;
+        gap: var(--space-sm);
     }
 
     .btn {
         width: 100%;
         justify-content: center;
+        padding: var(--space-md) var(--space-lg);
+    }
+
+    .hero-stats {
+        gap: var(--space-md);
+        margin-top: var(--space-lg);
+    }
+
+    .stat-number {
+        font-size: 1.5rem;
+    }
+
+    .stat-label {
+        font-size: 0.75rem;
+    }
+
+    .section-header {
+        margin-bottom: var(--space-xl);
+    }
+
+    .section-tag {
+        font-size: 0.75rem;
+        padding: var(--space-xs) var(--space-md);
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .about-lead {
+        font-size: 1.1rem;
+    }
+
+    .about-content p {
+        font-size: 0.95rem;
+    }
+
+    .highlight-item {
+        padding: var(--space-sm);
+    }
+
+    .highlight-item i {
+        width: 36px;
+        height: 36px;
+        font-size: 0.9rem;
+    }
+
+    .highlight-item strong {
+        font-size: 0.9rem;
+    }
+
+    .highlight-item span {
+        font-size: 0.8rem;
+    }
+
+    .experience-card {
+        padding: var(--space-md);
+        margin-bottom: var(--space-lg);
+    }
+
+    .card-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 1.25rem;
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+    }
+
+    .card-company {
+        font-size: 1rem;
+    }
+
+    .card-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .card-problem, .card-solution {
+        padding: var(--space-md);
+        margin: var(--space-md) 0;
+    }
+
+    .card-problem h4, .card-solution h4 {
+        font-size: 0.9rem;
+    }
+
+    .card-problem p, .card-solution p {
+        font-size: 0.9rem;
+    }
+
+    .card-toggle {
+        padding: var(--space-sm) var(--space-md);
+        font-size: 0.9rem;
+    }
+
+    .card-tags {
+        gap: var(--space-xs);
+    }
+
+    .tag {
+        font-size: 0.7rem;
+        padding: var(--space-xs) var(--space-sm);
     }
 
     .metrics-grid {
         grid-template-columns: 1fr;
+        gap: var(--space-sm);
+    }
+
+    .metric-card {
+        padding: var(--space-md);
+    }
+
+    .metric-value {
+        font-size: 1.5rem;
+    }
+
+    .metric-label {
+        font-size: 0.8rem;
+    }
+
+    .metric-detail {
+        font-size: 0.7rem;
+    }
+
+    .tech-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-xs);
+    }
+
+    .tech-value {
+        text-align: left;
     }
 
     .urgency-factors,
     .scoring-factors {
         flex-direction: column;
+    }
+
+    .factor, .score-item {
+        width: 100%;
+    }
+
+    .classification-table th,
+    .classification-table td {
+        padding: var(--space-sm);
+        font-size: 0.8rem;
+    }
+
+    .skill-category {
+        padding: var(--space-lg);
+    }
+
+    .category-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .category-header h3 {
+        font-size: 1.1rem;
+    }
+
+    .skill-category .skill-list li {
+        font-size: 0.85rem;
+    }
+
+    .tech-tools h3,
+    .certifications h3 {
+        font-size: 1.25rem;
+    }
+
+    .contact-intro {
+        font-size: 1rem;
+    }
+
+    .contact-method {
+        padding: var(--space-md);
+    }
+
+    .contact-method i {
+        font-size: 1rem;
+    }
+
+    .contact-method span {
+        font-size: 0.9rem;
+    }
+
+    .contact-form-wrapper {
+        padding: var(--space-lg);
+    }
+
+    .form-group label {
+        font-size: 0.8rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: var(--space-sm) var(--space-md);
+        font-size: 0.95rem;
+    }
+
+    .footer-content p {
+        font-size: 0.8rem;
+    }
+
+    .footer-links a {
+        width: 36px;
+        height: 36px;
     }
 }
 
